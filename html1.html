@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1st day homework</title>
+    <script type="text/javascript">
+        function onlyAlert(){
+            alert("This is Normal Alert");
+        }
+        function conditionAlert(){
+				if(confirm("Do you like me <3 ?")){
+					alert("YESSS");
+				}
+				else{
+					alert("NOOOO");
+				}
+			}
+        function entername(){
+				var fName=prompt("ENTER YOUR FIRST NAME ..");
+				var lName=prompt("ENTER YOUR LAST NAME..");
+				alert(fName+" "+lName);
+			}
+        function changeTogreen(){
+				document.body.style.backgroundColor="lightgreen";
+                document.body.style.color="red";
+			}
+        function changeToblack(){
+				document.getElementById("main").style.backgroundColor="black";
+			}
+        function changeBodycolor(){
+				document.body.style.backgroundColor=prompt("Your favourite color");
+			}
+        function changeTextcolor(){
+				document.body.style.color=prompt("Your favourite color");
+			}
+        function doChnageBG(){
+				document.body.style.backgroundColor=document.getElementById("control1").value;
+			}
+        function doChnageTEXT(){
+				document.body.style.color=document.getElementById("control2").value;
+			}
+    </script>
+    <style>
+        #main{
+            background-color: yellow;
+            color: red;
+            margin-top: 0%;
+            text-align: center;
+            height: 80px;
+            width: auto;
+            font-size: 30px;
+        }
+        body{
+            background-color: aqua;
+            text-align: center;
+        }
+        input{
+            font-size: 20px;
+        }
+        input:hover{
+            color: white;
+            background-color: black;
+        }
+    </style>
+</head>
+<body>
+    <div id="main">
+        This is 1st day's homework.<br>
+        I am learning JavaScript.
+    </div>
+    <hr>
+    <hr>
+    <h3>Click me...!</h3>
+        <input type="button" value="Press" onclick="alert('Aditya... Here..!')">
+        <hr><hr>
+    <h3>Check it</h3>  
+        <input type="button" value="Click to check" onclick="confirm('Ok It is You only')"/><hr><hr>
+    <h3>Wann a tell me ?</h3>
+        <input type="button" value="Tell me Something" onclick="prompt('say something........')"/><hr><hr>
+    <h3>Alert </h3>
+		<input type="button" value="Some alert" onclick="onlyAlert()"/><hr><hr>
+    <h3>Conditional Alert</h3>
+        <input type="button" value="Open it" onclick="conditionAlert()" /><hr><hr>
+    <h3>Prompt Internal</h3>
+        <input type="button" value="Full name" onclick="entername()"/>
+    <h3>Make background green</h3>
+        <input type="button" value="Green bg and Text red" onclick="changeTogreen()"/><hr><hr>
+    <h3>Check top DIV.</h3>
+        <input type="button" value="Div Black" onclick="changeToblack()"/><hr><hr>
+    <h3>Change body bg color to your favourite color</h3>
+        <input type="button" value="Suggest Color for Body" onclick="changeBodycolor()"/>
+    <h3>change text color to your favourite color</h3>
+        <input type="button" value="Suggest color for Text" onclick="changeTextcolor()"/>    
+    <h3>Bg Color</h3>
+        <input type="color" id="control1" onchange="doChnageBG()"/>
+    <h3>text Color</h3>
+        <input type="color" id="control2" onchange="doChnageTEXT()" />
+</body>
+</html>
